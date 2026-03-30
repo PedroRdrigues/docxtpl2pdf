@@ -1,3 +1,4 @@
+from os import path, mkdir
 from docxtpl2pdf import convert_template_to_pdf
 
 # Informações que vem com a requisição
@@ -15,6 +16,9 @@ template_docx = convert_template_to_pdf(
     context
 )
 
+
+if path.exists('./saves'):
+    mkdir(f"./saves")
 # Lê os bytes e salva em um arquivo.
 nome_arquivo_saida = "./saves/resultado_final.pdf"
 with open(nome_arquivo_saida, "wb") as f_out:
