@@ -1,0 +1,1 @@
+from docxtpl2pdf import convert_template_to_pdf
