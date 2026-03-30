@@ -17,7 +17,7 @@ template_docx = convert_template_to_pdf(
 )
 
 
-if path.exists('./saves'):
+if not path.exists('./saves'):
     mkdir(f"./saves")
 # Lê os bytes e salva em um arquivo.
 nome_arquivo_saida = "./saves/resultado_final.pdf"
